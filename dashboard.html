@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KrishiLink — Farmer Dashboard</title>
+<link rel="stylesheet" href="dashboard.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">KL</div>
+      <div>
+        <div class="brand-name">KrishiLink</div>
+        <div class="brand-tag">Market Intelligence</div>
+      </div>
+    </div>
+
+    <div class="user-card">
+      <div class="avatar" id="sidebarAvatar">AD</div>
+      <div>
+        <div class="user-name" id="sidebarName">Admin</div>
+        <div class="user-role" id="sidebarRole">Farmer · patna</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="dashboard.html" class="nav-item active">
+        <span class="nav-icon">⌂</span> Dashboard
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">↗</span> Price Intelligence
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">☑</span> Verified Buyers
+      </a>
+      <a href="index1.html" class="nav-item">
+        <span class="nav-icon">+</span> Sell My Crop
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">▭</span> Transactions
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">▤</span> FPO Hub
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">?</span> Help &amp; Support
+      </a>
+      <a href="login.html" class="nav-item" id="logoutBtn">
+        <span class="nav-icon">⎋</span> Logout
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="footer-badge">✓</div>
+      <div>
+        <div class="footer-title">Transparent trading</div>
+        <div class="footer-sub">Verified buyers · Clear prices</div>
+      </div>
+    </div>
+  </aside>
+
+  
+  <main class="main">
+
+    <header class="topbar">
+      <div class="breadcrumb">Farmer Portal / <strong>Dashboard</strong></div>
+      <div class="topbar-right">
+        <button class="icon-btn" aria-label="Notifications">🔔</button>
+        <select class="lang-select">
+          <option>English</option>
+          <option>हिंदी</option>
+          <option>मराठी</option>
+        </select>
+        <div class="user-chip">
+          <div class="avatar avatar-sm">RK</div>
+          <span>Admin ▾</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-row">
+      <div>
+        <div class="eyebrow">KrishiLink Farmer Portal</div>
+        <h1 class="greeting" id="greetingText">Good evening, Ramesh 👋</h1>
+        <p class="subtext">Make a better selling decision with market signals and verified buyers.</p>
+      </div>
+      <a href="index.html" class="btn-primary">+ List My Crop</a>
+    </section>
+
+    <section class="opportunity-card">
+      <div class="opportunity-text">
+        <div class="opportunity-label">Today's opportunity</div>
+        <h2>Tomato prices are trending up.</h2>
+        <p>Nearby verified buyers are offering up to <strong>₹28/kg</strong>. Your 500 kg harvest could earn up to <strong>₹14,000</strong> with a direct sale.</p>
+        <button class="btn-light">Find Best Buyer →</button>
+      </div>
+    </section>
+
+    <section class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-top"><span>Best Offer</span><span class="stat-icon">💰</span></div>
+        <div class="stat-value">₹28/kg</div>
+        <div class="stat-delta up">↑ 7.7% vs mandi</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-top"><span>Potential Revenue</span><span class="stat-icon">📈</span></div>
+        <div class="stat-value">₹14,000</div>
+        <div class="stat-delta">For 500 kg Grade A</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-top"><span>Verified Buyers</span><span class="stat-icon">✔</span></div>
+        <div class="stat-value">12</div>
+        <div class="stat-delta">3 matching your crop</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-top"><span>Active Transaction</span><span class="stat-icon">🚚</span></div>
+        <div class="stat-value">1</div>
+        <div class="stat-delta">Pickup tomorrow</div>
+      </div>
+    </section>
+
+    <section class="bottom-grid">
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Tomato price trend</h3>
+          <a href="#">View intelligence →</a>
+        </div>
+        <canvas id="trendChart" height="140"></canvas>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Nearby market prices</h3>
+          <a href="#">Compare all →</a>
+        </div>
+        <table class="mini-table" id="nearbyTable">
+          <!-- filled by JS -->
+        </table>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

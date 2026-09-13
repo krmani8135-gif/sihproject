@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KrishiLink - Market Linkage & Price Discovery</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Chart.js for price trend graph -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar-top">
+      <h1>🌾 KrishiLink</h1>
+      <div class="navbar-links">
+        <a href="login.html" class="nav-link">Login</a>
+        <a href="dashboard.html" class="nav-link">Go to Dashboard →</a>
+      </div>
+    </div>
+    <p>Market Linkage &amp; Price Discovery for Farmers - SIH26132</p>
+  </header>
+
+  <main>
+    <!-- SECTION 1: Live Mandi Prices -->
+    <section class="card">
+      <h2>Current Mandi Prices</h2>
+      <div id="priceTableContainer">Loading prices...</div>
+    </section>
+
+    <!-- SECTION 2: Price Trend Chart -->
+    <section class="card">
+      <h2>Price Trend (Sample)</h2>
+      <canvas id="priceChart" height="120"></canvas>
+    </section>
+
+    
+    <section class="card">
+      <h2>Post Your Crop (Farmer)</h2>
+      <form id="listingForm">
+        <input type="text" id="farmerName" placeholder="Your Name" required />
+        <input type="text" id="crop" placeholder="Crop Name (e.g. Onion)" required />
+        <input type="number" id="quantity" placeholder="Quantity (quintal)" required />
+        <input type="text" id="location" placeholder="Village / District" required />
+        <input type="number" id="expectedPrice" placeholder="Expected Price (optional)" />
+        <button type="submit">Submit Listing</button>
+      </form>
+      <p id="formMessage"></p>
+    </section>
+
+    <!-- SECTION 4: Buyer - Browse Listings -->
+    <section class="card">
+      <h2>Available Crop Listings (Buyer View)</h2>
+      <div id="listingsContainer">No listings yet.</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Prototype for Smart India Hackathon - SIH26132</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

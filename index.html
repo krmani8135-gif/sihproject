@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KrishiLink — Login</title>
+<link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+<div class="login-wrap">
+
+  <div class="login-card">
+
+    <div class="brand">
+      <div class="brand-mark">KL</div>
+      <div>
+        <div class="brand-name">KrishiLink</div>
+        <div class="brand-tag">Market Intelligence</div>
+      </div>
+    </div>
+
+    <h1>Welcome back</h1>
+    <p class="subtext">Log in to check prices, list your crop, or find buyers.</p>
+
+    
+    <div class="role-switch">
+      <button class="role-btn active" data-role="farmer" id="farmerTab">Farmer</button>
+      <button class="role-btn" data-role="buyer" id="buyerTab">Buyer</button>
+    </div>
+
+    <form id="loginForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="e.g. ABCD Kumar" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required />
+
+      <label for="location">Village / District</label>
+      <input type="text" id="location" placeholder="e.g. Patna" required />
+
+      <button type="submit" class="btn-primary" id="submitBtn">Continue as Farmer</button>
+    </form>
+
+    <p id="loginMessage"></p>
+
+    <p class="footnote">By continuing, you agree this is a hackathon prototype (SIH26132) — no real OTP is sent.</p>
+  </div>
+
+  <div class="login-side">
+    <h2>Transparent prices.<br/>Verified buyers.<br/>Better income.</h2>
+    <p>KrishiLink connects farmers directly to verified buyers with real-time mandi price intelligence.</p>
+  </div>
+
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
